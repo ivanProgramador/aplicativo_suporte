@@ -1,8 +1,16 @@
 
 <?php
+   //é importante colocar essa função entes de qualquer codigo que retorne 
+   //um pagina ou saida estamanete para que a siada seja controlada
+
+   session_start();
+   $_SESSION ['X'] = 'OI, SOU UM VALOR DE SESSÃO ';
+   print_r($_SESSION);
+
+
 
   /*
-   os arrays superglobais get e post são gerados de forma automatica
+   os arrays superglobais get e post são gerados de forma automática
    para que seja possivel pegar os dados submetidos pelo formulario a esse arquivo  
 
    print_r($_POST);
@@ -13,7 +21,7 @@
    echo $_POST['senha'];
   
   */
-
+  /*
   $usuario_autenticado = false;
 
   $usuarios_app = array(
@@ -31,17 +39,19 @@
          
       }
   }
-
+ */
 
   //se o login senha que tem no array forem iguais aos que vem do post 
   // variavel $usuario_auteticado sera true
 
+
+  /*
   if($usuario_autenticado){
      echo'usuario autenticado';
   }else{
      header('location: index.php? login=erro');
   }
-   
+   */
 
 
 ?>
