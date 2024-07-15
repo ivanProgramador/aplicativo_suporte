@@ -1,12 +1,13 @@
 
 <?php
+
    //é importante colocar essa função entes de qualquer codigo que retorne 
    //um pagina ou saida estamanete para que a siada seja controlada
 
    session_start();
-   $_SESSION ['X'] = 'OI, SOU UM VALOR DE SESSÃO ';
-   print_r($_SESSION);
 
+
+ 
 
 
   /*
@@ -21,7 +22,7 @@
    echo $_POST['senha'];
   
   */
-  /*
+  
   $usuario_autenticado = false;
 
   $usuarios_app = array(
@@ -39,19 +40,28 @@
          
       }
   }
- */
+ 
 
   //se o login senha que tem no array forem iguais aos que vem do post 
   // variavel $usuario_auteticado sera true
 
 
-  /*
+  
   if($usuario_autenticado){
      echo'usuario autenticado';
+     /*
+      Criando um novo indice no array session para que as outras paginas possam cheecar o valor dele 
+      o nome do indice é autenticado s ele estiver como sim a pagina é liberada caso não o cliente volta 
+      .para a pagina de login do sistema.
+       
+     */ 
+     $_SESSION['AUTENTICADO']='SIM';
+
   }else{
+     $_SESSION['AUTENTICADO']='NAO';
      header('location: index.php? login=erro');
   }
-   */
+   
 
 
 ?>

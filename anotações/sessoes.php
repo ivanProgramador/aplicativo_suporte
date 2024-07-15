@@ -14,8 +14,13 @@
   saida de pagina ou dado escrito exatamente para que a sessão possa determinar se vai retornar ou não,
   quando essa função é acionada ela gera um array chamado $_SESSION que é uma superglobal.
 
-  no caso todos os scrpts e pagainas que estiverem usando a amesa sessão do navegador podem compartilhar
-  essa variavel entre si, podendo testar se existe uma sessão e se ela existe qual e o valore que esta nela
+  no caso todos os scrpts e paginas que estiverem usando a mesma sessão do navegador podem compartilhar
+  essa variavel entre si, podendo testar se existe uma sessão e se ela existe qual e o valor que está ramazenado nela,
+  ou seja eu posso criar uma variavel de sessão na página home e essa variável pode ser lida por qualquer página que 
+  esteja dentro da mesma instancia do navegador.Isso significa que qualquer outro navegador pode acesar sua aplicação 
+  porém não vai ter acesso a variável de sessão. 
+  
+  Esse dado fica armazendo nos cookies que duram, por padrão ate 3 horas 
     
 
 
