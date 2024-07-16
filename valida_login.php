@@ -56,6 +56,7 @@
        
      */ 
      $_SESSION['AUTENTICADO']='SIM';
+     header('location: home.php');
 
   }else{
      $_SESSION['AUTENTICADO']='NAO';
