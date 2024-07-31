@@ -26,8 +26,9 @@
   $usuario_autenticado = false;
 
   $usuarios_app = array(
-     array('email'=>'admin@teste.com.br', 'senha'=>1234),
-     array('email'=>'user@teste.com.br','senha'=>1234)
+     array('id' => 1, 'email'=>'admin@teste.com.br', 'senha'=>1234),
+     array('id' => 2,'email'=>'user@teste.com.br','senha'=>1234),
+     array('id' => 3,'email'=>'maria@teste.com.br','senha'=>1234)
   );
 
   //usando o foreach para ler e depois comparar os dados de ususario vindos do formulario com os dados que existem no array
@@ -56,6 +57,7 @@
        
      */ 
      $_SESSION['AUTENTICADO']='SIM';
+     $_SESSION['id'] = $usuario_id;
      header('location: home.php');
 
   }else{
