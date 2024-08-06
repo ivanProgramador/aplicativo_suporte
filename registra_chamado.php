@@ -1,9 +1,6 @@
 <?php
 
-  echo'<pre>';
-  print_r($_POST);
-  echo'<pre>';
-
+  session_start();
   //criando um arquivo de texto 
   $arquivo = fopen('arquivo.hd','a');
   
@@ -17,7 +14,7 @@
   /*
    Aqui eu coloco as strinsgs ja tratadas dentro da variavel texto
   */
-  $texto = $titulo. '#' .$categoria. '#' .$descricao. PHP_EOL;
+  $texto = $_SESSION['id'].'#'.$titulo. '#' .$categoria. '#' .$descricao. PHP_EOL;
 
   //escrevendo no arquivo
 

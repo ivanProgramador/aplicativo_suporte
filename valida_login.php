@@ -26,9 +26,9 @@
   $usuario_autenticado = false;
 
   $usuarios_app = array(
-     array('id' => 1, 'email'=>'admin@teste.com.br', 'senha'=>1234),
-     array('id' => 2,'email'=>'user@teste.com.br','senha'=>1234),
-     array('id' => 3,'email'=>'maria@teste.com.br','senha'=>1234)
+     array('id' => 1, 'email'=>'admin@teste.com.br', 'senha'=>1234,'perfil_id'=>1),
+     array('id' => 2,'email'=>'user@teste.com.br','senha'=>1234,'perfil_id'=>2),
+     array('id' => 3,'email'=>'maria@teste.com.br','senha'=>1234,'perfil_id'=>2)
   );
 
   //usando o foreach para ler e depois comparar os dados de ususario vindos do formulario com os dados que existem no array
@@ -38,6 +38,7 @@
       if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']){
 
         $usuario_autenticado = true;
+        $usuario_id = $user['id'];
          
       }
   }
